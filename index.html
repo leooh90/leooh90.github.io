@@ -130,6 +130,17 @@
         </div>
         <!-- Inbenta initialization and configuration. -->
         <script>
+
+chatBot.subscriptions.onDisplayChatbotMessage(function(messageData, next) {
+    // BEFORE DisplayChatbotMessage action execution
+    if (messageData.message == "Sorry, we couldn't find any answers to your question."){
+      console.log("hidden message")
+      return
+    } else {
+      messageData.message = 'Custom chatbot message! ' + messageData.message;
+      return next(messageData);
+    }
+});
     function build() {
         var config = {
     "labels": {
