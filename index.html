@@ -131,19 +131,18 @@
         <!-- Inbenta initialization and configuration. -->
         <script>
 
-config = {
-  conversationWindow: {
+    function build() {
+        var config = {
+            conversationWindow: {
     position: {
       top: null,
       left: null,
-      bottom: 150,
-      right: 15,
+      bottom: null,
+      right: null,
     },
-  }
-}
+  },
 
-    function build() {
-        var config = {
+
     "labels": {
         "en": {
             "alert-button": "Try again",
